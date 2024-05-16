@@ -5,6 +5,53 @@
 <!-- {% block title %}Home - Clique Mambas{% endblock %} -->
 <link rel="stylesheet" href="{% static 'css/landing.css'%}">
 
+<section class="showcase">
+    <header>
+        <h2 class="logo">
+            <a href="/">CLIQUE MAMBAS</a>
+        </h2>
+        <div class="toggle"></div>
+    </header>
 
+    <video src="{% static 'assets/mambas.mp4' %}" muted loop autoplay></video>
+
+    <div class="overlay"></div>
+
+    <div class="text">
+        <h2>CLIQUE MAMBAS</h2>
+        <h3>Welcome to Clique Mambas Men's Basketball Team</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem magnam, fugiat inventore eos non ullam
+            distinctio deserunt optio accusamus sunt!</p>
+
+        <a href="#">Explore -></a>
+    </div>
+
+    <ul class="social">
+
+        <a href="#" target="_blank"><img src="{% static 'assets/instagram.png' %}"
+                alt="ig_logo"></a>
+        
+
+        <a href="#" target="_blank"><img src="{% static 'assets/gmail.png' %}" id="gmail"
+                alt="gmail_logo"></a>
+    </ul>
+</section>
+
+<div class="menu">
+    <ul>
+        <li><a href="/">Home</a></li>
+        
+
+
+        {% if user.is_superuser %}
+        <li class="nav-item">
+            <a class="nav-link" href="/admin" target="_blank"><strong>Admin</strong></a>
+        </li>
+        {% endif %}
+
+    </ul>
+</div>
+
+<script src="{% static 'js/landing.js'%}"></script>
 
 {% endblock %}
