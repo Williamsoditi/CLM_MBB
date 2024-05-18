@@ -9,7 +9,7 @@
     <header>
         <h2 class="logo">
             <a href="/">
-                <img src="{% static 'assets/mambas_logo.png'%}" height="100px">
+                <img src="{% static 'assets/logo.png'%}" height="100px">
             </a>
         </h2>
         <div class="toggle"></div>
@@ -21,7 +21,7 @@
 
     <div class="text">
         <h2>CLIQUE MAMBAS</h2>
-        <h3>Welcome to Clique Mambas Men's Basketball Team</h3>
+        <h3>Welcome to Clique Mambas Men's Basketball Team.</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem magnam, fugiat inventore eos non ullam
             distinctio deserunt optio accusamus sunt!</p>
 
@@ -30,19 +30,21 @@
 
     <ul class="social">
 
-        <a href="#" target="_blank"><img src="{% static 'assets/instagram.png' %}"
-                alt="ig_logo"></a>
-        
+        <a href="#" target="_blank"><img src="{% static 'assets/instagram.png' %}" alt="ig_logo"></a>
 
-        <a href="#" target="_blank"><img src="{% static 'assets/gmail.png' %}" id="gmail"
-                alt="gmail_logo"></a>
+
+        <a href="#" target="_blank"><img src="{% static 'assets/gmail.png' %}" id="gmail" alt="gmail_logo"></a>
+
+        <a href="#" target="_blank"><img src="{% static 'assets/facebook.png' %}" id="facebook" alt="facebook_logo"></a>
     </ul>
 </section>
 
 <div class="menu">
     <ul>
         <li><a href="/">Home</a></li>
-        
+        <li><a href="{% url 'player_bios' %}">Player Bios</a></li>
+        <li><a href="{% url 'schedule' %}">Game Schedule</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
 
 
         {% if user.is_superuser %}
