@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import *
+
 
 # Create your views here.
 
@@ -9,8 +11,15 @@ def contact(request):
     return render(request, 'contact.html')
 
 def player_bios(request):
-    return render(request, 'player_bios.html')
+    players = Player.objects.all()
+    return render(request, 'player_bios.html', {
+        'players': players
+    })
 
 def schedule(request):
-    return render(request, 'schedule.html')
+    schedules = Schedule.objects.all()
+    return render(request, 'schedule.html', {
+        'schedules':schedules
+    })
+
 
