@@ -205,5 +205,8 @@
     #gmail{
         display: none;
     }
+    #logo{
+        height: 80px;
+    }
 }
 
