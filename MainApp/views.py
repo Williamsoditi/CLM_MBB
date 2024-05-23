@@ -10,6 +10,9 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def about(request):
+    return render(request, 'about.html')
+
 def player_bios(request):
     players = Player.objects.all()
     return render(request, 'player_bios.html', {
